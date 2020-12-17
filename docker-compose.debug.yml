@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  pdfmerge:
+    image: pdfmerge
+    volumes:
+      - "./input:/input"
+      - "./output:/output"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    user: "501:20"
+    command: ["sh", "-c", "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 watcher.py "]
+    ports:
+      - 5678:5678

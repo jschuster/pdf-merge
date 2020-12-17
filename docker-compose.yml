@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  pdfmerge:
+    image: pdfmerge
+    volumes:
+      - "./input:/input"
+      - "./output:/output"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
