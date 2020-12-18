@@ -26,10 +26,15 @@
 					},
 					{
 						"localPath": "${workspaceFolder}/output",
-						  "containerPath": "/output",
-						  "permissions": "rw"
-						},
-				]
+						"containerPath": "/output",
+						"permissions": "rw"
+					}
+				],
+				"env": {
+					"ODD_PAGES_PATTERN":"front",
+					"EVEN_PAGES_PATTERN":"back",
+				}
+					
 			},
 			"python": {
 				"file": "watcher.py"

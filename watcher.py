@@ -32,13 +32,14 @@ from subprocess import call
 from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 
+ODD_PAGES_PATTERN = os.getenv('ODD_PAGES_PATTERN', 'odd')
+EVEN_PAGES_PATTERN = os.getenv('EVEN_PAGES_PATTERN', 'even')
+MERGED_NAME_PREFIX = os.getenv('MERGED_NAME_PREFIX', 'merged')
+
 INPUT_DIRECTORY = os.getenv('INPUT_DIRECTORY', '/input')
 OUTPUT_DIRECTORY = os.getenv('OUTPUT_DIRECTORY', '/output')
 POLL_NEW_FILE_SECONDS = int(os.getenv('POLL_NEW_FILE_SECONDS', '1'))
 PDF_PATTERNS = ['*.pdf', '*.PDF']
-ODD_PAGES_PATTERN = 'front'
-EVEN_PAGES_PATTERN = 'back'
-MERGED_NAME_PREFIX = 'merged'
 
 LOGLEVEL = os.getenv('LOGLEVEL', 'INFO').upper()
 
