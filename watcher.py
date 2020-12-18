@@ -112,7 +112,11 @@ if __name__ == "__main__":
     log.info(
         f"Starting PDF watcher with config:\n"
         f"Input Directory: {INPUT_DIRECTORY}\n"
-        f"Output Directory: {OUTPUT_DIRECTORY}"
+        f"Output Directory: {OUTPUT_DIRECTORY}\n"
+        f"Odd pages pdf name pattern: {ODD_PAGES_PATTERN}\n"
+        f"Even pages pdf name pattern: {EVEN_PAGES_PATTERN}\n"
+        f"Merged pages pdf name prefix: {MERGED_NAME_PREFIX}\n"
+        f"Wait time (s) for polling on new files: {POLL_NEW_FILE_SECONDS}"
     )
 
     event_handler = EventHandler(patterns=PDF_PATTERNS)
