@@ -28,6 +28,11 @@
 						"localPath": "${workspaceFolder}/output",
 						"containerPath": "/output",
 						"permissions": "rw"
+					},
+					{
+						"localPath": "/etc/localtime",
+						"containerPath": "/etc/localtime",
+						"permissions": "ro"
 					}
 				],
 				"env": {
