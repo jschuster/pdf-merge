@@ -2,10 +2,16 @@ version: '3.4'
 
 services:
   pdfmerge:
-    image: pdfmerge
+    restart: always
+    container_name: pdfmerge
+    image: joschuster/pdfmerge
     volumes:
-      - "./input:/input"
-      - "./output:/output"
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+      - "/volume1/public/scan/duplexinbox:/input"
+      - "/volume1/public/scan/inbox:/output"
+      - "/etc/localtime:/etc/localtime:ro"
+    environment: 
+      - ODD_PAGES_PATTERN="front"
+      - EVEN_PAGES_PATTERN="back"
+    user: "<user-id>:<group-id>"
+    entrypoint: python3
+    command: watcher.py
