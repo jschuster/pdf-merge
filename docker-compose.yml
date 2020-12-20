@@ -10,8 +10,8 @@ services:
       - "/volume1/public/scan/inbox:/output"
       - "/etc/localtime:/etc/localtime:ro"
     environment: 
-      - ODD_PAGES_PATTERN="front"
-      - EVEN_PAGES_PATTERN="back"
+      - ODD_PAGES_PATTERN=front
+      - EVEN_PAGES_PATTERN=back
     user: "<user-id>:<group-id>"
     entrypoint: python3
     command: watcher.py
