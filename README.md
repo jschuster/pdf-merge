@@ -1,4 +1,6 @@
 # pdfmerge
+![automation](https://img.shields.io/docker/cloud/automated/joschuster/pdfmerge) ![build status](https://img.shields.io/docker/cloud/build/joschuster/pdfmerge)
+
 A Docker container that watches for incoming files and merges (collates) them together using [qpdf](https://github.com/qpdf/qpdf).
 
 Highly inspired by [OCRmyPDF](https://hub.docker.com/r/jbarlow83/ocrmypdf) and [rversts pdfmerge docker-container](https://hub.docker.com/r/rverst/pdfmerge)
